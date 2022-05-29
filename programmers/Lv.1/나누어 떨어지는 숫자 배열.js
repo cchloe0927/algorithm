@@ -18,5 +18,3 @@ function solution(arr, divisor){
 let arr = [3,2,6]
 let divisor = 5
 console.log(solution(arr, divisor))
-
-//일요일 업로드
