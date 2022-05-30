@@ -16,8 +16,6 @@ function solution(s){
 let s = "qwer"
 console.log(solution(s))
 
-//월요일 업로드
-
 
 
 
