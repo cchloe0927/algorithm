@@ -21,7 +21,7 @@ for (let i = 0; i < input.length; i++) {
 }
 
 //---- 아래 코드는 틀린 답안
-// for (let i = 0; i < input.length-1; i++) {
+// for (let i = 0; i < input.length - 1; i++) {
 //   let A = parseInt(input[i].split(' ')[0]);
 //   let B = parseInt(input[i].split(' ')[1]);
 //   let result = A + B;

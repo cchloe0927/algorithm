@@ -7,9 +7,14 @@ let input = fs
   .toString()
   .split('\n');
 
-for (let i = 0; i < input.length - 1; i++) {
+for (let i = 0; i < input.length; i++) {
   let A = parseInt(input[i].split(' ')[0]);
   let B = parseInt(input[i].split(' ')[1]);
   let result = A + B;
-  console.log(result);
+
+  if (!result) {
+    break;
+  } else {
+    console.log(result);
+  }
 }
