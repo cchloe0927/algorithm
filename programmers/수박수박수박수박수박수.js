@@ -16,5 +16,5 @@ function solution(n) {
   return answer;
 }
 
-n = 3;
+n = 4;
 console.log(solution(n)); //"수박수"
