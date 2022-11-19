@@ -11,10 +11,12 @@ function solution(arr, divisor) {
       answer.push(arr[i]);
     }
   }
+  //divisor로 나누어 떨어지지 않아 push되지 않으면 answer은 빈배열 이기 때문에
   if (answer.length === 0) {
     answer = [-1];
   }
-  return answer.sort((a, b) => a - b);
+  answer.sort((a, b) => a - b);
+  return answer;
 }
 
 arr = [2, 36, 1, 3];
