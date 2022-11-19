@@ -22,8 +22,8 @@ function solution(a, b) {
   return answer;
 }
 
-a = 1;
-b = 31;
+a = 5;
+b = 24;
 console.log(solution(a, b)); //"TUE"
 
 /*풀이설명
