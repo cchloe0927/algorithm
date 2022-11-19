@@ -37,6 +37,8 @@ console.log(solution(s)); //"TrY HeLlO WoRlD"
 //유사 배열 객체란 마치 배열처럼 인덱스로 프로퍼티 값에 접근할 수 있고 length 프로퍼티를 갖는 객체를 말한다.
 //문자열은 마치 배열처럼 인덱스를 통해 각 문자에 접근할 수 있으며, length 프로퍼티를 갖기 때문에 유사 배열 객체이고 for문으로 순회할 수 도 있다.
 
+/////////////////////
+
 //2. 공백으로 단어를 나눠주고 시작
 function solution(s) {
   //console.log(s.length); //15(공백 포함)
@@ -44,14 +46,15 @@ function solution(s) {
   let words = s.split(' '); //split()메서드는 String 문자열을 'separator'라는 구분자를 기준으로 잘라 배열에 저장하여 리턴 -> [ 'try', 'hello', 'world' ]
   console.log(words);
 
-  for (let i = 0; i < s.length; i++) {
-    for (let j = 0; j < s[i].length; j++) {
+  for (let i = 0; i < words.length; i++) {
+    for (let j = 0; j < words[i].length; j++) {
       if (j % 2 === 0) {
-        answer += s[i][j].toUpperCase();
+        answer += words[i][j].toUpperCase();
       } else {
-        answer += s[i][j].toLowerCase();
+        answer += words[i][j].toLowerCase();
       }
     }
+    answer += ' ';
   }
   return answer;
 }
