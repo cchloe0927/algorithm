@@ -4,18 +4,41 @@ n이 양의 정수 x의 제곱이라면 x+1의 제곱을 리턴하고,
 n이 양의 정수 x의 제곱이 아니라면 -1을 리턴하는 함수를 완성하세요.
 */
 
+//while문 쓰고 푸는법
 function solution(n) {
-  var answer = 0;
-  for (let i = 1; i * i <= n; i++) {
-    if (i * i === n) {
-      i++;
-      answer = i * i;
-    } else if (answer == 0) {
+  let answer = 0;
+  let x = 0;
+  while (x * x < n) {
+    x++;
+    if (x * x === n) {
+      x++;
+      answer = x * x;
+      break;
+    } else {
       answer = -1;
     }
   }
   return answer;
 }
 
-n = 121;
+let n = 121;
 console.log(solution(n)); //144
+
+/*
+//for문 쓰고 푸는법
+function solution(n) {
+  let answer = 0;
+  for (let i = 1; i * i <= n; i++) {
+    if (i * i === n) {
+      i++;
+      answer = i * i;
+    } else {
+      answer = -1;
+    }
+  }
+  return answer;
+}
+
+let n = 121;
+console.log(solution(n)); //144
+*/
