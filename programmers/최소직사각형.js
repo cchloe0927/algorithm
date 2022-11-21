@@ -16,8 +16,27 @@
 */
 
 function solution(sizes) {
-  var answer = 0;
-  return answer;
+  let newArr = [];
+
+  for (let i = 0; i < sizes.length; i++) {
+    //console.log(sizes[i]);
+    if (sizes[i][0] < sizes[i][1]) {
+      //배열안에 각 배열에서 비교하여
+      newArr.push([sizes[i][1], sizes[i][0]]); //가로길이가 최대값이 오게 설정
+    } else {
+      newArr.push(sizes[i]); //나머지는 그래로 push
+    }
+  }
+  //console.log(newArr);
+
+  //위에서 배열안의 각 배열들 안의 값을 내림차순으로 만들어 줬고
+  //아래에서 배열안의 각 배열들을 내림차순으로 만들기
+  let widthMax = newArr.sort((a, b) => b[0] - a[0])[0][0];
+  //console.log(widthMax);
+  let heightMax = newArr.sort((a, b) => b[1] - a[1])[0][1];
+  //console.log(heightMax);
+
+  return widthMax * heightMax;
 }
 
 let sizes = [
