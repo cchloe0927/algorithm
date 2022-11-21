@@ -44,7 +44,7 @@ function solution(s) {
   let answer = [];
 
   if (!isNaN(s)) {
-    answer.push(s[i]);\
+    answer.push(s[i]);
   }
   for (let i = 0; i < alphabet.length; i++) {
     //console.log(alphabet[i]);
