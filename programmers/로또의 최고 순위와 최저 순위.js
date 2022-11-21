@@ -35,8 +35,8 @@ function solution(lottos, win_nums) {
   }
   let maxRank = sameNumberCount + zeroCount;
   let mixRank = sameNumberCount;
-  console.log(maxRank);
-  console.log(mixRank);
+  //console.log(maxRank);
+  //console.log(mixRank);
 
   //맞은 개수를 순위로 바꾸는 작업
   for (let i = 0; i < rank.length; i++) {

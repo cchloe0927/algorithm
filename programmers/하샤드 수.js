@@ -23,8 +23,3 @@ function solution(x) {
 
 let arr = 13;
 console.log(solution(arr)); //true
-
-/*문제풀이
-  while문 조건식의 평가 결과가 언제나 참이면 무한루프를 돌기 때문에 무한루프에서 탈출하기 위해서는 
-  코드 블록 내에 if문으로 탈출 조건을 만들고 break문으로 코드블록을탈출한다.
-  */
