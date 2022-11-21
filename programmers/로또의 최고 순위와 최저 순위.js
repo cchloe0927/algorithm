@@ -20,7 +20,6 @@ function solution(lottos, win_nums) {
   let answer = [];
   let sameNumberCount = 0;
   let zeroCount = 0;
-  let rank = [6, 6, 5, 4, 3, 2, 1];
 
   for (let i = 0; i < lottos.length; i++) {
     for (let j = 0; j < lottos.length; j++) {
@@ -35,21 +34,15 @@ function solution(lottos, win_nums) {
   }
   let maxRank = sameNumberCount + zeroCount;
   let mixRank = sameNumberCount;
-  //console.log(maxRank);
-  //console.log(mixRank);
+  console.log(maxRank);
+  console.log(mixRank);
 
   //맞은 개수를 순위로 바꾸는 작업
-  for (let i = 0; i < rank.length; i++) {
-    if (rank[i] == maxRank) {
-      answer.push(i);
-    }
-    if (rank[i] == mixRank) {
-      answer.push(i);
-    }
-  }
+  answer[0] = maxRank < 2 ? 6 : 7 - maxRank;
+  answer[1] = mixRank < 2 ? 6 : 7 - mixRank;
   return answer;
 }
 
-let lottos = [44, 1, 0, 0, 31, 25];
-let win_nums = [31, 10, 45, 1, 6, 19];
-console.log(solution(lottos, win_nums)); //[3, 5]
+let lottos = [45, 4, 35, 20, 3, 9];
+let win_nums = [20, 9, 3, 45, 4, 35];
+console.log(solution(lottos, win_nums)); //[1, 1]

@@ -16,4 +16,4 @@ function solution(arr) {
 }
 
 let arr = [4, 4, 4, 3, 3];
-console.log(solution(arr)); //[1,3,0,1]
+console.log(solution(arr)); //[4, 3]
