@@ -38,6 +38,8 @@ function solution(lottos, win_nums) {
   console.log(mixRank);
 
   //맞은 개수를 순위로 바꾸는 작업
+  //0, 1개를 맞췄을 때는 똑같이 -> 6등
+  //나머지는 7-최대, 최소값을 하면 순위가 나옴
   answer[0] = maxRank < 2 ? 6 : 7 - maxRank;
   answer[1] = mixRank < 2 ? 6 : 7 - mixRank;
   return answer;
