@@ -22,20 +22,20 @@ function solution(nums) {
       }
     }
   }
-
-  //소수 판별 함수
-  function isPrime(sum) {
-    if (sum < 2) {
-      return true; //소수 1일 때는 무조건 true
-    }
-    for (let i = 2; i < sum; i++) {
-      if (sum % i === 0) {
-        return false; //2부터 나머지가 0으로 떨어지면 소수가 아님
-      }
-    }
-    return true;
-  }
   return answer;
+}
+
+//소수 판별 함수
+function isPrime(sum) {
+  if (sum < 2) {
+    return true; //소수 1일 때는 무조건 true
+  }
+  for (let i = 2; i < sum; i++) {
+    if (sum % i === 0) {
+      return false; //2부터 나머지가 0으로 떨어지면 소수가 아님
+    }
+  }
+  return true;
 }
 
 let nums = [1, 2, 3, 4];
