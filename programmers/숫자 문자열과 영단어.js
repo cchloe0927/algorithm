@@ -148,5 +148,6 @@ function solution(s) {
   return +s;
 }
 
+//출력 값
 let s = 'one4seveneight';
 console.log(solution(s)); //1478
