@@ -127,27 +127,26 @@ return 값이 1 이상 2,000,000,000 이하의 정수가 되는 올바른 입력
 // }
 
 //4. replace 사용해서 문제 풀이
-// function solution(s) {
-//   let answer = '';
-//   let alphabet = [
-//     'zero', //0
-//     'one', //1
-//     'two', //2
-//     'three', //3
-//     'four', //4
-//     'five', //5
-//     'six', //6
-//     'seven', //7
-//     'eight', //8
-//     'nine', //9
-//   ];
+function solution(s) {
+  let alphabet = [
+    'zero', //0
+    'one', //1
+    'two', //2
+    'three', //3
+    'four', //4
+    'five', //5
+    'six', //6
+    'seven', //7
+    'eight', //8
+    'nine', //9
+  ];
 
-//   for (let i = 0; i < alphabet.length; i++) {
-//     s = s.replaceAll(alphabet[i], i);
-//   }
-//   console.log(s);
-//   return answer;
-// }
+  for (let i = 0; i < alphabet.length; i++) {
+    s = s.replaceAll(alphabet[i], i);
+  }
+  //console.log(s);
+  return +s;
+}
 
 let s = 'one4seveneight';
 console.log(solution(s)); //1478
