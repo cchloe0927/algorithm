@@ -16,15 +16,27 @@ function solution(s, n) {
   let answer = '';
 
   for (let i = 0; i < s.length; i++) {
-    if (s[i].includes(upper[i])) {
-      console.log(upper[i]);
-      console.log(upper.indexOf(upper[i]));
-      answer += upper[i + 1];
-      console.log(answer);
+    if (s[i] === ' ') {
+      //빈값을 만났을 때 빈값을 넣어줌
+      answer += ' ';
+      continue;
     }
+    //대문자인경우 대문자 변수에서 찾고 아니면 소문자 변수에서 찾음
+    let upperOrlower = upper.includes(s[i]) ? upper : lower;
+
+    //찾은 문자열을 인덱스를 구해서 + n 더하기
+    let index = upperOrlower.indexOf(s[i]) + n;
+    //console.log(index);
+
+    //만약 더한 인덱스가 할당한 문자열의 길이보다 길거나 같은 경우 인덱스에서 문자열의 길이를 빼줌
+    if (index >= upperOrlower.length) {
+      index -= upperOrlower.length;
+    }
+    answer += upperOrlower[index];
   }
+  return answer;
 }
 
-let s = 'DE';
-let n = 1;
-console.log(solution(s, n)); //"BC"
+let s = 'a B z';
+let n = 4;
+console.log(solution(s, n)); //"e F d"
