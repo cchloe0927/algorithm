@@ -57,8 +57,6 @@ return 값이 1 이상 2,000,000,000 이하의 정수가 되는 올바른 입력
 //   }
 //   return parseInt(answer);
 // }
-// let s = 'one4seveneight';
-// console.log(solution(s)); //1478
 
 // //2. for문을 이용한 문제 풀이
 // function solution(s) {
@@ -104,9 +102,6 @@ return 값이 1 이상 2,000,000,000 이하의 정수가 되는 올바른 입력
 //   return parseInt(answer);
 // }
 
-// let s = 'one4seveneight';
-// console.log(solution(s)); //1478
-
 //3. alphabet의 요소와 주어진 문자열의 문자는 똑같기 때문에 split로 구분을 둠
 // function solution(s) {
 //   let answer = s;
@@ -131,9 +126,6 @@ return 값이 1 이상 2,000,000,000 이하의 정수가 되는 올바른 입력
 //   return Number(answer);
 // }
 
-// let s = 'one4seveneight';
-// console.log(solution(s)); //1478
-
 //4. replace 사용해서 문제 풀이
 // function solution(s) {
 //   let answer = '';
@@ -157,5 +149,5 @@ return 값이 1 이상 2,000,000,000 이하의 정수가 되는 올바른 입력
 //   return answer;
 // }
 
-// let s = 'one4seveneight';
-// console.log(solution(s)); //1478
+let s = 'one4seveneight';
+console.log(solution(s)); //1478
