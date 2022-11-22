@@ -16,7 +16,7 @@ function solution(month, day) {
     count -= months[finalMonth]; //116 - 31 - 28 - 31 = 26
     if (count < 0) {
       count += months[finalMonth]; //-4가 되기 때문에 다스 months[3]의 값을 더해 줘서 26으로 만듦
-      monthOutput += finalMonth + 1; //인덱스 번호는 0부터 시작함으로 + 1 해서 해당 월 수 를 출력함
+      monthOutput += finalMonth + 1; //finalMonth: 3 인덱스 번호는 0부터 시작함으로 + 1 해서 해당 월 수 를 출력함
       dayOutput += count;
       return `'${monthOutput}월 ${dayOutput}일'`;
     }
