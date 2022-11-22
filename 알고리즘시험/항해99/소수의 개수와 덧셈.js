@@ -10,15 +10,27 @@ str에 나타나는 숫자 중 소수의 최대값과 소수가 아닌 수의 �
 */
 
 function solution(s) {
-  let answer = '';
-  let arr = s.split(' ');
+  let answer = 0;
+  let min = []; //배열 x -1
+  let max = []; // - 1
+  let arr = s.split(' ').map((item) => Number(item));
   console.log(arr);
-  let max = arr.sort((a, b) => b - a);
-  console.log(max);
-  return answer;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      // for (int i = 2; i < arr[i]; i++) {if 만약 나눠지면 소수 아님, 나눠지지 않으면 소수}
+      min.push(arr[i]);
+      console.log('min: ', min);
+    } else {
+      max.push(arr[i]);
+      console.log('max: ', max);
+    }
+  }
+  let isPrimeMax = max.sort((a, b) => b - a);
+  let isNotPrimeMin = min.sort((a, b) => b - a);
+  console.log(isNotPrimeMin[0], isPrimeMax[0]);
 }
 
-let s = '97 75 88 99 95 92 73';
-console.log(solution(s)); //"75 97"
+let s = '2 3 4 5';
+console.log(solution(s)); //"4 5"
 
 //문제 풀이
