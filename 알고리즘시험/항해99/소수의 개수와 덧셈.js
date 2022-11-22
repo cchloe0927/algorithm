@@ -10,27 +10,36 @@ str에 나타나는 숫자 중 소수의 최대값과 소수가 아닌 수의 �
 */
 
 function solution(s) {
-  let answer = 0;
-  let min = []; //배열 x -1
-  let max = []; // - 1
+  let answer = '';
+  let prime = []; //배열 x -1
+  let nonePrime = []; // - 1
   let arr = s.split(' ').map((item) => Number(item));
   console.log(arr);
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) {
-      // for (int i = 2; i < arr[i]; i++) {if 만약 나눠지면 소수 아님, 나눠지지 않으면 소수}
-      min.push(arr[i]);
-      console.log('min: ', min);
+    if (isPrime(arr[i])) {
+      prime.push(arr[i]);
     } else {
-      max.push(arr[i]);
-      console.log('max: ', max);
+      nonePrime.push(arr[i]);
     }
   }
-  let isPrimeMax = max.sort((a, b) => b - a);
-  let isNotPrimeMin = min.sort((a, b) => b - a);
-  console.log(isNotPrimeMin[0], isPrimeMax[0]);
+  let primeMax = prime.sort((a, b) => b - a)[0];
+  let nonePrimeMin = nonePrime.sort((a, b) => a - b)[0];
+  answer = `'${nonePrimeMin} ${primeMax}'`;
+  return answer;
 }
 
-let s = '2 3 4 5';
-console.log(solution(s)); //"4 5"
+//소수 판별 함수
+function isPrime(num) {
+  if (num < 2) {
+    return true; //소수 1일 때는 무조건 true
+  }
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false; //2부터 나머지가 0으로 떨어지면 소수가 아님
+    }
+  }
+  return true;
+}
 
-//문제 풀이
+let s = '97 75 88 99 95 92 73';
+console.log(solution(s)); //"75 97"
