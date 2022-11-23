@@ -20,16 +20,17 @@ function solution(n) {
   nArr[1] = false;
 
   for (let i = 2; i <= n; i++) {
-    if (nArr[i] == true) {
-      for (let j = 2; j <= n; j++) {
+    if (nArr[i]) {
+      for (let j = 2; i * j <= n; j++) {
+        //for문 조건에서 생성해준 배열 보다 넘지 않도록 조건 설정!
         nArr[i * j] = false;
       }
     }
     //console.log(nArr[i]);
   }
   //소수이면 true이기 때문에 true일 때 count를 1씩 증가 시키기
-  for (let i = 0; i < nArr.length; i++) {
-    if (nArr[i] === true) {
+  for (let i = 0; i <= n; i++) {
+    if (nArr[i]) {
       count++;
     }
   }
