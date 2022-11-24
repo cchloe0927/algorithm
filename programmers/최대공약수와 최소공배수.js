@@ -5,16 +5,25 @@
 */
 
 function solution(n, m) {
-  const greatest = (a, b) => {
-    if (b === 0) return a;
-    return greatest(b, a % b);
-  };
-  const least = (a, b) => (a * b) / greatest(a, b);
-  return [greatest(n, m), least(n, m)];
+  let G = 0;
+  let L = 0;
+
+  let num = Math.max(n, m);
+  console.log(num);
+
+  //최대 공약수 구하기
+  for (let i = 1; i < num; i++) {
+    if (n % i === 0 && m % i === 0) {
+      G = i;
+    }
+  }
+
+  //최소 공배수 구하기
+  L = (n * m) / G;
+
+  return [G, L];
 }
 
 let n = 3;
 let m = 12;
 console.log(solution(n, m)); //[3, 12]
-
-//유클리드 호제법
