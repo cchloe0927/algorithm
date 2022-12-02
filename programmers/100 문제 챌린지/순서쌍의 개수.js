@@ -15,4 +15,4 @@ function solution(n) {
 }
 
 let n = 20;
-console.log(solution(emergency)); //6
+console.log(solution(emergency));
