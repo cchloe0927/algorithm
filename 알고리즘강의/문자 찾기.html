@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str, T) {
+        let sum = 0;
+        for (let i = 0; i < str.length; i++) {
+          if (str[i] === T) {
+            sum++;
+          }
+        }
+        return sum;
+      }
+
+      let str = "COMPUTERPROGRAMMING";
+      console.log(solution(str, "T"));
+    </script>
+  </body>
+</html>
