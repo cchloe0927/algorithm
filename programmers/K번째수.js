@@ -20,7 +20,6 @@ function solution(array, commands) {
 }
 
 let array = [1, 5, 2, 6, 3, 7, 4];
-//      i => 0  1  2  3  4  5  6
 let commands = [
   [2, 5, 3],
   [4, 4, 1],
