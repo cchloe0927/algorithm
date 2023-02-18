@@ -1,0 +1,24 @@
+<!-- 한 개의 문자열을 입력받아 해당 문자열에 알파벳 대문자가 몇 개 있는지 알아내는 프로그램 을 작성하세요. -->
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let count = 0;
+        for (let answer of s) {
+          if (answer === answer.toUpperCase()) {
+            count++;
+          }
+        }
+        return count;
+      }
+
+      let str = "KoreaTimeGood";
+      console.log(solution(str)); //3
+    </script>
+  </body>
+</html>
