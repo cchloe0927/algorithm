@@ -1,4 +1,4 @@
-/* 백준 제출
+/* 입출력
 let fs = require('fs');
 let input = fs.readFileSync("/dev/stdin").toString();
 */
