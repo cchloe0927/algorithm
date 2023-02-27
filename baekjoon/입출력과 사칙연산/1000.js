@@ -1,14 +1,14 @@
 /* 백준 제출
-const fs = require('fs');
-const inputData = fs.readFileSync(0, 'utf8').toString().split(' ');
-const A = parseInt(inputData[0]);
-const B = parseInt(inputData[1]);
-console.log(A+B);
+let fs = require('fs');
+let input = fs.readFileSync("/dev/stdin").toString();
 */
 
-//문제 : 첫째 줄에 A+B를 출력한다.
+let fs = require("fs");
+let input = fs
+  .readFileSync(__dirname + "/input.txt")
+  .toString()
+  .split(" ");
 
-const A = 1;
-const B = 2;
-
+let A = parseInt(input[0]);
+let B = parseInt(input[1]);
 console.log(A + B);
