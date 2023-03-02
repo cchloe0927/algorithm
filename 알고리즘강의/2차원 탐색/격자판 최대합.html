@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        let answer = 0;
+        let n = arr.length; //5
+        let column = 0;
+        let row = 0;
+        for (let i = 0; i < n; i++) {
+          column = row = 0;
+          for (let j = 0; j < n; j++) {
+            column += arr[i][j];
+            row += arr[j][i];
+          }
+          answer = Math.max(answer, column, row);
+        }
+        //대각선
+        column = row = 0;
+        for (let i = 0; i < n; i++) {
+          column += arr[i][i];
+          row += arr[i][n - i - 1];
+        }
+        answer = Math.max(answer, column, row);
+        return answer;
+      }
+
+      let arr = [
+        [10, 13, 10, 12, 15],
+        [12, 39, 30, 23, 11],
+        [11, 25, 50, 53, 15],
+        [19, 27, 29, 37, 27],
+        [19, 13, 30, 13, 19],
+      ];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>
